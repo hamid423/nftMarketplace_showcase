@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Download, Features, SectionWrapper } from "./components";
+import assets from './assets'
+import styles from "./styles/Global";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      
+      <SectionWrapper
+        title="NFT Marketplace UI using React Native"
+        description="You can test the app on Expo store"
+
+        showBtn
+        mockupImg={assets.mockup01}
+        banner="banner"
+      />
+      <SectionWrapper
+        title="smart UI marketplace"
+        description="modern NFT Marketplace iOS and Android"
+        mockupImg={assets.mockup02}
+        reverse
+      />
+      <Features/>
+      <Download/>
+      <div className="px-4 py-2 justify-center items-center bg-primary flex-col text-center banner04">
+        <p className={`${styles.pText} ${styles.whiteText}`}>Made with ❤️ by {" "} 
+          <span className="bold">Hamid Jemaaoui</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      </div>
+    </>
   );
 }
 
